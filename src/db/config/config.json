@@ -1,0 +1,41 @@
+{
+  "development": {
+    "username": "jetrzsoj",
+    "password": "5_lrP2HuWp_F_74gWlTJ51rK7aRbP-Nm",
+    "database": "jetrzsoj",
+    "host": "hattie.db.elephantsql.com",
+    "dialect": "postgres",
+    "pool": {
+      "max": 1,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "test": {
+    "username": "jetrzsoj",
+    "password": "5_lrP2HuWp_F_74gWlTJ51rK7aRbP-Nm",
+    "database": "jetrzsoj",
+    "host": "hattie.db.elephantsql.com",
+    "dialect": "postgres",
+    "pool": {
+      "max": 1,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "production": {
+    "username": "jetrzsoj",
+    "password": "5_lrP2HuWp_F_74gWlTJ51rK7aRbP-Nm",
+    "database": "jetrzsoj",
+    "host": "hattie.db.elephantsql.com",
+    "dialect": "postgres",
+    "pool": {
+      "max": 1,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  }
+}
