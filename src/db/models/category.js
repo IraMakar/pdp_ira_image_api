@@ -12,7 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       models.category.hasMany(models.view_history, {
         foreignKey: "category_id",
-      });    }
+      });    
+      models.category.hasMany(models.Picture, {
+        foreignKey: "category_id",
+      }); }
   };
   category.init({
     name: DataTypes.STRING,

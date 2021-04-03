@@ -17,6 +17,7 @@ const findPicturesByHistory = async (params) => {
     include: [
       {
         model: Picture,
+        where: {is_deleted:{[db.Sequelize.Op.not]:true}},
         include: [
           {
             model: Hashtag

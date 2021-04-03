@@ -5,6 +5,8 @@ const getHashtagStatisticByArtist = async (params) => {
   const { artist_id } = params;
   const { view_history, hashtags_view_history, Hashtag, Picture } = db;
 
+console.log(artist_id);
+
   const statistic = await hashtags_view_history.findAll({
     attributes: [
       "hashtag_id",
@@ -13,7 +15,7 @@ const getHashtagStatisticByArtist = async (params) => {
     group: ["hashtag_id", "Hashtag.id"],
     include: [
       {
-        model: view_history,
+        model: view_history, required: true,
         attributes: [],
         include: [
           {

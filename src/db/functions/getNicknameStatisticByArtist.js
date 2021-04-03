@@ -6,7 +6,8 @@ const getNicknameStatisticByArtist = async (params) => {
   const { view_history, Picture } = db;
 
   const statistic = await view_history.findAll({
-    attributes: [
+   where: {search_type: "byArtistSearchType"}, 
+   attributes: [
       "nickname",
       [
         db.Sequelize.literal("COUNT(DISTINCT(view_history.id))"),

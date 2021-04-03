@@ -11,12 +11,15 @@ module.exports = (sequelize, DataTypes) => {
       models.Picture.hasMany(models.Hashtag, {
         foreignKey: "picture_id",
       });
+        models.Picture.belongsTo(models.category, {
+          foreignKey: "category_id",
+        });
       models.Picture.hasMany(models.view_history, {
         foreignKey: "picture_id",
       });
       models.Picture.hasMany(models.likes, {
         foreignKey: "picture_id",
-      });
+      }); 
     }
   }
   Picture.init(
@@ -39,7 +42,10 @@ module.exports = (sequelize, DataTypes) => {
       },
       category_id: {
         type: DataTypes.INTEGER,
-      }
+      },
+      is_deleted: {
+        type: DataTypes.BOOLEAN,
+      } 
     },
     {
       sequelize,

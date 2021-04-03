@@ -9,6 +9,7 @@ const findPicturesByLiked = async (params) => {
     limit,
     offset,
     order: [["id", "DESC"]],
+    where: {is_deleted:{[db.Sequelize.Op.not]:true}},
     include: [
       {
         model: Hashtag,

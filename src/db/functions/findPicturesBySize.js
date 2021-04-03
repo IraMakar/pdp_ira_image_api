@@ -8,6 +8,7 @@ const findPicturesBySize = async (params) => {
   const { Picture, Hashtag, likes } = db;
   return Picture.findAll({
     where: {
+      is_deleted:{[db.Sequelize.Op.not]:true},
       [db.Sequelize.Op.or]: [
         {
           [db.Sequelize.Op.and]: [

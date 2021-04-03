@@ -10,6 +10,7 @@ const findPicturesByHashtag = async (hashtag, params) => {
     limit,
     offset,
     where: {
+      is_deleted:{[db.Sequelize.Op.not]:true},
       id: {
         [db.Sequelize.Op.in]: db.Sequelize.literal(
           `( SELECT picture_id FROM public."Hashtags" WHERE lower(tag) IN (${
