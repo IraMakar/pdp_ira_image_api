@@ -173,6 +173,6 @@ app.delete("/hashtags/:picture_id", async (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(process.env.port, () => {
-  console.log(`Example app listening at http://localhost:${process.env.port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Example app listening at http://localhost:${process.env.PORT}`);
 });
